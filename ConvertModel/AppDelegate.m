@@ -23,25 +23,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
-//    NSMutableDictionary * dic = [NSMutableDictionary dictionary];
-//    
-//    [dic setValue:@"pid123" forKey:@"pid"];
-//    [dic setValue:@"sid456" forKey:@"sid"];
-//    
-//    NSDictionary * dicl = @{@"lid" : @"lid789"};
-//    [dic setValue:dicl forKey:@"lMod"];
-//    
-//    ConvertModel * model = [[ConvertModel alloc] init];
-//    
-//    [model convertDataFromDictionary:dic];
-//    
-//    NSLog(@"tm:%@",model);
-//    
-//    NSDictionary * toDic = [model convertModelToDicionary];
-//    
-//    NSLog(@"toDic:%@",toDic);
+    UIViewController * vc = [UIViewController new];
+    self.window.rootViewController = vc;
+    
+///   下面是一些 测试代码  test code
+    
+    NSMutableDictionary * dic = [NSMutableDictionary dictionary];
+    
+    [dic setValue:@"pid123" forKey:@"pid"];
+    [dic setValue:@"sid456" forKey:@"sid"];
+    
+    NSDictionary * dicl = @{@"lid" : @"lid789"};
+    [dic setValue:dicl forKey:@"lMod"];
+    
+    ConvertModel * model = [[ConvertModel alloc] init];
+    
+    [model convertDataFromDictionary:dic];
+    
+    NSLog(@"tm:%@",model);
+    
+    NSDictionary * toDic = [model convertModelToDicionary];
+    
+    NSLog(@"toDic:%@",toDic);
     
     
     self.window.backgroundColor = [UIColor whiteColor];
